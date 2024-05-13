@@ -1,0 +1,5 @@
+&(executable=lab3.sh)
+(jobname=testjob)
+(inputFiles=(lab3.sh "")(lab3.py ""))
+(stdout=out.txt)
+(stderr=err.txt)

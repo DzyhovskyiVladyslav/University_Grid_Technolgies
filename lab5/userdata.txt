@@ -1,0 +1,11 @@
+#cloud-config
+ssh_pwauth: True
+disable_root: false
+password: 1
+chpasswd: {expire: false}
+bootcmd:
+- sudo apt-get update
+- sudo apt-get install -y python sshpass
+- sudo sshpass -p "y7Sam>#b" scp -o StrictHostkeyChecking=no cloud-user2@cloud-11.bitp.kiev.ua:/home/cloud-user2/dzyhovskyi/lab5/lab5.py /home/ubuntu/
+- cd /home/ubuntu/
+- python lab5.py
